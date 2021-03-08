@@ -54,15 +54,23 @@ const carsModel = mongoose.model('cars', carsSchema)
 //     console.log(response)
 // })
 
-carsModel.insertMany([{
-    _id: 1,
-    brand: 'Aston Martin',
-    model: 'DB9',
-    year: 2010
-}, 
-{
-    _id: 2,
-    brand: 'Range Rover',
-    model: 'Discovery Sport',
-    year: 2017
-}])
+// carsModel.insertMany([{
+//     _id: 1,
+//     brand: 'Aston Martin',
+//     model: 'DB9',
+//     year: 2010
+// }, 
+// {
+//     _id: 2,
+//     brand: 'Range Rover',
+//     model: 'Discovery Sport',
+//     year: 2017
+// }])
+
+// carsModel.find({ 
+//     year: { $gt: 2015 } 
+// }).then((response) => console.log(response));
+
+carsModel.find({
+    model: /o/
+}).then((response) => console.log(response));

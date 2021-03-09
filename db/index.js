@@ -10,27 +10,32 @@ const carsSchema = new mongoose.Schema({
     year: Number,
     created: Date
 });
+let updatedAt = new Date()
 
 const carsModel = mongoose.model('cars', carsSchema)
 // carsModel.deleteMany({}).then(() => {
 //     carsModel.create([
-//         {   
-//             _id: 1,
+//         {
+//             _id: 10,
 //             brand: 'Renault',
 //             model: 'Espace',
-//             year: 1999
+//             year: 1999,
+//             created: updatedAt
 //         },
 //         {
-//             _id: 2,
+//             _id: 12,
 //             brand: 'Renault',
 //             model: 'Scenic',
-//             year: 2004
+//             year: 2004,
+//             created: updatedAt
+
 //         },
 //         {
-//             _id: 3,
+//             _id: 14,
 //             brand: 'Peugeot',
 //             model: '308',
-//             year: 2017
+//             year: 2017,
+//             created: updatedAt
 //         }
 //     ])
 // })
@@ -58,13 +63,15 @@ const carsModel = mongoose.model('cars', carsSchema)
 //     _id: 1,
 //     brand: 'Aston Martin',
 //     model: 'DB9',
-//     year: 2010
+//     year: 2010,
+//     created: updatedAt
 // }, 
 // {
 //     _id: 2,
 //     brand: 'Range Rover',
 //     model: 'Discovery Sport',
-//     year: 2017
+//     year: 2017,
+//     created: updatedAt
 // }])
 
 // carsModel.find({ 
